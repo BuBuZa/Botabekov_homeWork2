@@ -7,18 +7,17 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public Transform groundCheck;
     public LayerMask groundMask;
-    public float speed = 10f;
+    public float speed = 5f;
     public float gravity = -9.8f;
     public float jumpHeight = 3f;
-    public float groundDistance = 0.1f;
-    private Vector3 velocity;
-
-    private bool isGrounded;
+    public float groundDistance = 0.4f;
+    public Vector3 velocity;
+    public bool isGrounded;
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -52,11 +51,11 @@ public class PlayerMovement : MonoBehaviour
 //speedForce
         if (Input.GetKey("left shift"))
         {
-            speed = 20f;
+            speed = 10f;
         }
         else
         {
-            speed = 10f;
+            speed = 5f;
         }
     }
     
